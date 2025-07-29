@@ -1,0 +1,211 @@
+{
+  "@context": {
+    "snomed": "http://snomed.info/id/",
+    "ncim": "https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncim/",
+    "custom": "https://example.org/generations-study/custom-ontology#",
+    "cis": {
+      "@id": "snomed:189336000",
+      "@type": "@vocab",
+      "@context": {
+        "P": "snomed:52101004",
+        "N": "snomed:2667000"
+      }
+    },
+    "dcis": {
+      "@id": "snomed:109889007",
+      "@type": "@vocab",
+      "@context": {
+        "P": "snomed:52101004",
+        "N": "snomed:2667000"
+      }
+    },
+    "lcis": {
+      "@id": "snomed:109888004",
+      "@type": "@vocab",
+      "@context": {
+        "P": "snomed:52101004",
+        "N": "snomed:2667000"
+      }
+    },
+    "pleomorphicLCIS": {
+      "@id": "snomed:762260000",
+      "@type": "@vocab",
+      "@context": {
+        "P": "snomed:52101004",
+        "N": "snomed:2667000"
+      }
+    },
+    "pagetsDisease": {
+      "@id": "snomed:2985005",
+      "@type": "@vocab",
+      "@context": {
+        "P": "snomed:52101004",
+        "N": "snomed:2667000"
+      }
+    },
+    "microinvasion": {
+      "@id": "snomed:443933007",
+      "@type": "@vocab",
+      "@context": {
+        "P": "snomed:52101004",
+        "N": "snomed:2667000"
+      }
+    },
+    "invasiveCarcinoma": {
+      "@id": "snomed:713609000",
+      "@type": "@vocab",
+      "@context": {
+        "P": "snomed:52101004",
+        "N": "snomed:2667000"
+      }
+    },
+    "closestRelevantMargin": "snomed:371489008",
+    "excisionMargin": {
+      "@id": "snomed:395536008",
+      "@type": "@vocab",
+      "@context": {
+        "RRM": "snomed:370109009",
+        "NRM": "snomed:310342002"
+      }
+    },
+    "erScoreType": {
+      "@id": "custom:erScoreType",
+      "@type": "@vocab",
+      "@context": {
+        "QS": "snomed:445104009",
+        "IP": "ncim:CL504588",
+        "MD": "custom:erScoreType-mitchDowsett",
+        "I": "snomed:1236874005",
+        "P": "snomed:1234804006"
+      }
+    },
+    "erStatus": {
+      "@id": "snomed:445028008",
+      "@type": "@vocab",
+      "@context": {
+        "P": "snomed:416053008",
+        "N": "snomed:441117001",
+        "NP": "snomed:262008008"
+      }
+    },
+    "prScoreType": {
+      "@id": "custom:prScoreType",
+      "@type": "@vocab",
+      "@context": {
+        "QS": "snomed:445104009",
+        "IP": "ncim:CL504588",
+        "MD": "custom:prScoreType-mitchDowsett",
+        "I": "snomed:1237278006",
+        "P": "snomed:1234803000"
+      }
+    },
+    "prStatus": {
+      "@id": "snomed:445029000",
+      "@type": "@vocab",
+      "@context": {
+        "P": "snomed:416561008",
+        "N": "snomed:441118006",
+        "NP": "snomed:262008008"
+      }
+    },
+    "her2IhcScore": {
+      "@id": "ncim:CL1778287",
+      "@type": "@vocab",
+      "@context": {
+        "0": "ncim:CL545334",
+        "1+": "ncim:CL545335",
+        "2+": "ncim:CL545336",
+        "3+": "ncim:CL545424"
+      }
+    },
+    "her2Status": {
+      "@id": "snomed:3550001000004108",
+      "@type": "@vocab",
+      "@context": {
+        "N": "snomed:431396003",
+        "B": "snomed:371932001",
+        "P": "snomed:427685000",
+        "NP": "snomed:262008008"
+      }
+    },
+    "her2FISH": {
+      "@id": "snomed:434363004",
+      "@type": "@vocab",
+      "@context": {
+        "A": "snomed:1162602001",
+        "N": "snomed:705105000",
+        "P": "ncim:CL539497",
+        "NEG": "ncim:CL539496",
+        "NP": "snomed:262008008"
+      }
+    },
+    "ki67": "snomed:1237281001",
+    "axillaryProcedure": {
+      "@id": "snomed:301796003",
+      "@type": "@vocab",
+      "@context": {
+        "ANC": "snomed:79544006",
+        "ANS": "snomed:178294003",
+        "NLN": "snomed:416237000",
+        "OSNA": "snomed:1285485007",
+        "SNB": "snomed:396487001"
+      }
+    },
+    "vascularInvasion": {
+      "@id": "snomed:373379001",
+      "@type": "@vocab",
+      "@context": {
+        "Pres": "snomed:372287009",
+        "Poss": "snomed:127495004",
+        "NS": "snomed:127494000"
+      }
+    },
+    "side": {
+      "@id": "snomed:384727002",
+      "@type": "@vocab",
+      "@context": {
+        "L": "snomed:7771000",
+        "R": "snomed:24028007"
+      }
+    },
+    "screenDetected": {
+      "@id": "snomed:171176006",
+      "@type": "@vocab",
+      "@context": {
+        "Y": "snomed:373066001",
+        "N": "snomed:373067005"
+      }
+    },
+    "specimenType": {
+      "@id": "snomed:122548005",
+      "@type": "@vocab",
+      "@context": {
+        "WBB": "snomed:44578009",
+        "WLE": "snomed:237371007",
+        "M": "snomed:1231734007",
+        "NBO": "snomed:21911005",
+        "OB": "snomed:736615002",
+        "Re-ex": "snomed:395165008",
+        "SE": "snomed:237370008",
+        "TMP": "snomed:33496007",
+        "FNA": "snomed:387736007",
+        "LB": "custom:specimenType-LB"
+      }
+    },
+    "specimenWeight": "snomed:371506001",
+    "postNeoadjuvantChemo": {
+      "@id": "snomed:400001000004103",
+      "@type": "@vocab",
+      "@context": {
+        "C": "snomed:1259200004",
+        "E": "snomed:169413002"
+      }
+    },
+    "tStage": "snomed:78873005",
+    "nStage": "snomed:277206009",
+    "mStage": "snomed:277208005",
+    "sizeWholeTumour": "snomed:263605001",
+    "sizeDcisOnly": "snomed:2710001000004109",
+    "sizeInvasiveTumour": "snomed:384630000"
+  }
+}

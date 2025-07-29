@@ -1187,7 +1187,9 @@ async function callOpenAiForExtraction(task) {
     const { report, schema, model, systemPrompt } = task;
 
     const developerPrompt = buildDeveloperPrompt(systemPrompt, report.content);
-    const userQuery = buildUserQuery(schema);
+    let userQuery = buildUserQuery(schema);
+	
+	userQuery = `${developerPrompt}\n\n${userQuery}`; // Fix for DeepSeek
 
     const regex = /```json\s*([\s\S]*?)\s*```/;
     let attempt = 0;
@@ -1197,7 +1199,7 @@ async function callOpenAiForExtraction(task) {
             const response = await openaiClient.chat.completions.create({
                 model: model,
                 messages: [
-                    { role: 'developer', content: developerPrompt },
+                    //{ role: 'developer', content: developerPrompt },
                     { role: 'user', content: userQuery }
                 ],
                 temperature: 0.0,

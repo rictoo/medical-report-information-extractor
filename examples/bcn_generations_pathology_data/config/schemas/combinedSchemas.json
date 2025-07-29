@@ -1,0 +1,429 @@
+{
+  "type": "object",
+  "properties": {
+        "cis": {
+      "description": "Determine if the report mentions whether or not a type of carcinoma in situ (CIS) of the breast was present. CIS can include ductal carcinoma in situ (DCIS) or lobular carcinoma in situ (LCIS).",
+      "type": ["string", "null"],
+      "enum": ["P", "N", null],
+      "enumDescriptions": [
+        "Assign 'P': if the report mentions that a type of CIS was present.",
+        "Assign 'N': only if the report explicitly mentions that none of the types of CIS were present. Note: avoid the common error of incorrectly assigning 'N' when no information is contained in the report on the presence/absence of CIS.",
+        "Assign null: if the report does not contain any information on either the presence or absence of CIS."
+      ]
+    },
+    "dcis": {
+      "description": "Determine if the report mentions whether or not ductal carcinoma in situ (DCIS) was present.",
+      "type": ["string", "null"],
+      "enum": ["P", "N", null],
+      "enumDescriptions": [
+        "Assign 'P': if the report mentions that DCIS was present.",
+        "Assign 'N': only if the report explicitly mentions that DCIS was not present. Note: avoid the common error of incorrectly assigning 'N' when no information is contained in the report on the presence/absence of DCIS.",
+        "Assign null: if the report does not contain any information on either the presence or absence of DCIS."
+      ]
+    },
+    "lcis": {
+      "description": "Determine if the report mentions whether or not lobular carcinoma in situ (LCIS) was present.",
+      "type": ["string", "null"],
+      "enum": ["P", "N", null],
+      "enumDescriptions": [
+        "Assign 'P': if the report mentions that LCIS was present.",
+        "Assign 'N': only if the report explicitly mentions that LCIS was not present. Note: avoid the common error of incorrectly assigning 'N' when no information is contained in the report on the presence/absence of LCIS.",
+        "Assign null: if the report does not contain any information on either the presence or absence of LCIS."
+      ]
+    },
+    "pleomorphicLCIS": {
+      "description": "Determine if the report mentions whether or not pleomorphic lobular carcinoma in situ (LCIS) was present. Pleomorphic LCIS is a type of LCIS.",
+      "type": ["string", "null"],
+      "enum": ["P", "N", null],
+      "enumDescriptions": [
+        "Assign 'P': if the report mentions that pleomorphic LCIS was present.",
+        "Assign 'N': only if the report explicitly mentions that pleomorphic LCIS was not present. Note: avoid the common error of incorrectly assigning 'N' when no information is contained in the report on the presence/absence of pleomorphic LCIS.",
+        "Assign null: if the report does not contain any information on either the presence or absence of pleomorphic LCIS."
+      ]
+    },
+    "pagetsDisease": {
+      "description": "Determine if the report mentions whether or not Paget's disease of the breast was present.",
+      "type": ["string", "null"],
+      "enum": ["P", "N", null],
+      "enumDescriptions": [
+        "Assign 'P': if the report mentions that Paget's disease of the breast was present.",
+        "Assign 'N': only if the report explicitly mentions that Paget's disease of the breast was not present. Note: avoid the common error of incorrectly assigning 'N' when no information is contained in the report on the presence/absence of Paget's disease.",
+        "Assign null: if the report does not contain any information on either the presence or absence of Paget's disease of the breast."
+      ]
+    },
+    "microinvasion": {
+      "description": "Determine if the report mentions whether or not microinvasive breast cancer was present.",
+      "type": ["string", "null"],
+      "enum": ["P", "N", null],
+      "enumDescriptions": [
+        "Assign 'P': if the report mentions that microinvasive breast cancer was present.",
+        "Assign 'N': only if the report explicitly mentions that microinvasive breast cancer was not present. Note: avoid the common error of incorrectly assigning 'N' when no information is contained in the report on the presence/absence of microinvasive carcinoma.",
+        "Assign null: if the report does not contain any information on either the presence or absence of microinvasive breast cancer."
+      ]
+    },
+    "invasiveCarcinoma": {
+      "description": "Determine if the report mentions whether or not invasive breast cancer was present.",
+      "type": ["string", "null"],
+      "enum": ["P", "N", null],
+      "enumDescriptions": [
+        "Assign 'P': if the report mentions that invasive breast cancer was present.",
+        "Assign 'N': only if the report explicitly mentions that invasive breast cancer was not present. Note: avoid the common error of incorrectly assigning 'N' when no information is contained in the report on the presence/absence of invasive carcinoma.",
+        "Assign null: if the report does not contain any information on either the presence or absence of invasive breast cancer."
+      ]
+    },
+    "solidDCISGP": {
+      "description": "Determine if ductal carcinoma in situ (DCIS) growth patterns (architecture) are described in the report. Assign true: if the DCIS growth pattern is described as solid. Assign false: otherwise.",
+      "type": "boolean"
+    },
+    "cribriformDCISGP": {
+      "description": "Determine if ductal carcinoma in situ (DCIS) growth patterns (architecture) are described in the report. Assign true: if the DCIS growth pattern is described as cribriform. Assign false: otherwise.",
+      "type": "boolean"
+    },
+    "micropapillaryDCISGP": {
+      "description": "Determine if ductal carcinoma in situ (DCIS) growth patterns (architecture) are described in the report. Assign true: if the DCIS growth pattern is described as micropapillary. Assign false: otherwise.",
+      "type": "boolean"
+    },
+    "papillaryDCISGP": {
+      "description": "Determine if ductal carcinoma in situ (DCIS) growth patterns (architecture) are described in the report. Assign true: if the DCIS growth pattern is described as papillary. Assign false: otherwise.",
+      "type": "boolean"
+    },
+    "apocrineDCISGP": {
+      "description": "Determine if ductal carcinoma in situ (DCIS) growth patterns (architecture) are described in the report. Assign true: if the DCIS growth pattern is described as apocrine. Assign false: otherwise.",
+      "type": "boolean"
+    },
+    "flatDCISGP": {
+      "description": "Determine if ductal carcinoma in situ (DCIS) growth patterns (architecture) are described in the report. Assign true: if the DCIS growth pattern is described as flat. Assign false: otherwise.",
+      "type": "boolean"
+    },
+    "comedoDCISGP": {
+      "description": "Determine if ductal carcinoma in situ (DCIS) growth patterns (architecture) are described in the report. Assign true: if the DCIS growth pattern is described as comedo. Assign false: otherwise.",
+      "type": "boolean"
+    },
+    "clingingDCISGP": {
+      "description": "Determine if ductal carcinoma in situ (DCIS) growth patterns (architecture) are described in the report. Assign true: if the DCIS growth pattern is described as clinging. Assign false: otherwise.",
+      "type": "boolean"
+    },
+    "comedonecrosisExtent": {
+      "description": "Determine if the the report contains information on comedo necrosis in ductal carcinoma in situ (DCIS).",
+      "type": ["string", "null"],
+      "enum": ["Y", "N", "Mil", "Mod", "Mar", null],
+      "enumDescriptions": [
+        "Assign 'Y': if the report specifies that comedo necrosis is present in DCIS but the extent is not specified.",
+        "Assign 'N': if the report explicitly specifies that comedo necrosis is not present in DCIS.",
+        "Assign 'Mil': if the report specifies that comedo necrosis is present in DCIS and the extent is mild.",
+        "Assign 'Mod': if the report specifies that comedo necrosis is present in DCIS and the extent is moderate.",
+        "Assign 'Mar': if the report specifies that comedo necrosis is present in DCIS and the extent is marked.",
+        "Assign null: if the report does not contain information on comedo necrosis in DCIS."
+      ]
+    },
+    "closestRelevantMargin": {
+      "description": "Determine if the pathology report lists the distances to the relevant margins (in mm) in the excision. They are typically measured from different anatomical directions such as— anterior, posterior, medial, lateral, inferior, superior, etc. The closest relevant margin is the shortest distance associated with any margin, regardless of its anatomical direction. Extract the closest relevant margin and assign the value to this variable. Assign null: if the pathology report does not list the distances to the relevant margins in the excision. Note 1: If the closest margin is imprecisely reported as 'less than 1mm' (or <1mm), assign 0.9. This rule only applies if the reported value is less than 1 and no value other than 1. Note 2: If the report contains a section summarizing the different margins, the information contained here takes precedence over information reported elsewhere in the report. Note 3: If the pathologist explicitly states the closest relevant margin, the value there should take precedence over all other margin information in the report. Note 4: If the pathologist mentions that the tumour reaches relevant margins, assign null. Note 5: If the closest relevant margin is 0mm, assign null.",
+      "type": ["number", "null"]
+    },
+    "excisionMargin": {
+      "description": "If the pathologist mentions that the tumour reaches (or does not reach) the relevant margin in the excision, assign the appropriate value from the enum list below.",
+      "type": ["string", "null"],
+      "enum": ["RRM", "NRM", null],
+      "enumDescriptions": [
+        "Assign 'RRM': if the report explicitly mentions that the tumour reaches the relevant margin in the excision.",
+        "Assign 'NRM': if the report explicitly mentions that the tumour does not reach the relevant margin in the excision. Note: If the pathologist does not explicitly state if the tumour reaches relevant margin but the value of 'closestRelevantMargin' is not null, assign 'NRM'.",
+        "Assign null: if the pathology report does not mention anything about the tumour reaching the relevant margins in the excision and neither 'RRM' nor 'NRM' is applicable."
+      ]
+    },
+    "invasiveGrade": {
+      "description": "Determine if the report assigns an integer grade for invasive carcinoma, if detected in the patient. The integer grade can either be 1, 2, or 3. It may sometimes be represented as roman numerals— I, II, or III— in which case, convert them into the corresponding integer grade (1, 2, and 3, respectively) when you assign a value for this variable. If you notice typographical or sentence alignment errors due to erratic optical character recognition, use your judgement from the context. Assign null: if no integer grade was assigned in the report for invasive carcinoma.",
+      "type": ["integer", "null"],
+      "enum": [1, 2, 3, null]
+    },
+    "tubulesScore": {
+      "description": "Determine if the report assigns an integer score for tubules formation in invasive carcinoma, if detected in the patient. This information is typically reported in close proximity to the invasive carcinoma grade. The integer tubules formation score can either be 1, 2, or 3. It is sometimes reported prefixed with an 'A' (A1, A2, A3) or 'T' (T1, T2, T3), in which case, convert them into the corresponding integer score (1, 2, and 3, respectively) when you assign a value for this variable. Sometimes three successive numbers are reported next to the invasive grade, e.g. '(3,2,1)', here the first number (3) usually refers to the tubules formation score. If you notice typographical or sentence alignment errors due to erratic optical character recognition, use your judgement from the context. Assign null: if no integer score was assigned in the report for tubules formation in invasive carcinoma.",
+      "type": ["integer", "null"],
+      "enum": [1, 2, 3, null]
+    },
+    "nuclearPleomorphismScore": {
+      "description": "Determine if the report assigns an integer score for nuclear pleomorphism in invasive carcinoma, if detected in the patient. This information is typically reported in close proximity to the invasive carcinoma grade. The integer nuclear pleomorphism score can either be 1, 2, or 3. It is sometimes reported prefixed with an 'N' (N1, N2, N3) or 'P' (P1, P2, P3), in which case, convert them into the corresponding integer score (1, 2, and 3, respectively) when you assign a value for this variable. Sometimes three successive numbers are reported next to the invasive grade, e.g. '(3,2,1)', here the second number (2) usually refers to the nuclear pleomorphism score. If you notice typographical or sentence alignment errors due to erratic optical character recognition, use your judgement from the context. Assign null: if no integer score was assigned in the report for nuclear pleomorphism in invasive carcinoma.",
+      "type": ["integer", "null"],
+      "enum": [1, 2, 3, null]
+    },
+    "mitoticActivityScore": {
+      "description": "Determine if the report assigns an integer score for mitotic activity in invasive carcinoma, if detected in the patient. This information is typically reported in close proximity to the invasive carcinoma grade. The integer mitotic activity score can either be 1, 2, or 3. It is sometimes reported prefixed with an 'M' (M1, M2, M3), in which case, convert them into the corresponding integer score (1, 2, and 3, respectively) when you assign a value for this variable. Sometimes three successive numbers are reported next to the invasive grade, e.g. '(3,2,1)', here the third number (1) usually refers to the mitotic activity score. If you notice typographical or sentence alignment errors due to erratic optical character recognition, use your judgement from the context. Assign null: if no integer score was assigned in the report for mitotic activity in invasive carcinoma.",
+      "type": ["integer", "null"],
+      "enum": [1, 2, 3, null]
+    },
+    "dcisGrade": {
+      "description": "Determine if the report describes the (nuclear) grade of ductal carcinoma in situ (DCIS), if detected in the patient.",
+      "type": ["string", "null"],
+      "enum": ["L", "IL", "I", "HI", "H", null],
+      "enumDescriptions": [
+        "Assign 'L': if the report specifies a low grade DCIS.",
+        "Assign 'IL': if the report specifies an intermediate and low grade DCIS.",
+        "Assign 'I': if the report specifies an intermediate grade DCIS.",
+        "Assign 'HI': if the report specifies a high and intermediate grade DCIS.",
+        "Assign 'H': if the report specifies a high grade DCIS.",
+        "Assign null: if the DCIS grade was not described in the report."
+      ]
+    },
+    "erScoreType": {
+      "description": "If the pathology report specifies a immunohistochemistry test score for oestrogen receptor (ER) status, determine the type of score that is being reported.",
+      "type": ["string", "null"],
+      "enum": ["QS", "IP", "MD", "I", "P", null],
+      "enumDescriptions": [
+        "Assign 'QS': if the report mentions that it is reporting an Allred score or a quick score (QS) for ER status. Its value ranges from 0-8. Note 1: if the score for ER status is reported as a fraction out of 8 without mentioning the score type (e.g. 7/8) assume that it is reporting an Allred score, and assign 'QS'. Note 2: if the score for ER status is reported as an integer, the integer is between 0 and 8, and the report does not specify any of the ER score types listed here, assume that it is reporting an Allred score and assign 'QS'. Note 3: if a quick/Allred score is being reported in conjunction with other component scores (i.e. percentage of positive cells and intensity of staining) choose the quick/Allred score, and therefore assign 'QS'.",
+        "Assign 'IP': if the report mentions that it is reporting a H-score or a combined score obtained by multiplying the intensity of staining and the percentage of positive cells for ER status. Its value ranges from 0-300. Note: if a H-score/combined score is being reported in conjunction with other component scores (i.e. percentage of positive cells and intensity of staining) choose the H-score/combined score, and therefore assign 'IP'.",
+        "Assign 'MD': if the report mentions that it is reporting the Mitch Dowsett score for ER status. Its value ranges from 0-18. Note: if a Mitch Dowsett score is being reported in conjunction with other component scores (i.e. percentage of positive cells and intensity of staining) choose the Mitch Dowsett score, and therefore assign 'MD'.",
+        "Assign 'I': if the report only mentions the intensity of staining for ER status and does not mention any derived scores (i.e. quick/Allred score, H-score/combined score, Mitch Dowsett score). This case is unusual. Its value ranges from 0-3. Note: if the intensity of staining is being reported for ER status in conjunction with a derived score (i.e. quick/Allred score, H-score/combined score, Mitch Dowsett score) choose the derived score, and do not assign 'I'.",
+        "Assign 'P': if the report only mentions the percentage of positive cells for ER status and does not mention any derived scores (i.e. quick/Allred score, H-score/combined score, Mitch Dowsett score). This case is unusual. Its value ranges from 0-100%. Note: if the percentage of positive cells is being reported for ER status in conjunction with a derived score (i.e. quick/Allred score, H-score/combined score, Mitch Dowsett score) choose the derived score, and do not assign 'P'.",
+        "Assign null: if the report does not mention any of the ER score types listed here or if none of the listed options are appropriate."
+      ]
+    },
+    "erStatus": {
+      "description": "If the pathology report specifies the oestrogen receptor (ER) status, extract and assign the value to this variable.",
+      "type": ["string", "null"],
+      "enum": ["P", "N", "NP", null],
+      "enumDescriptions": [
+        "Assign 'P': if the report specifies that the ER status is positive. Note: in the unusual case where the ER status is not specified in the report but the 'erScoreType' variable is assigned 'QS', and a quick/Allred score (ranges from 0-8) is assigned in the report— attempt to infer the ER status on your own. Here, if the specified quick/Allred score is 3, 4, 5, 6, 7, or 8, assign 'P'. Otherwise, assign 'N'",
+        "Assign 'N': if the report specifies that the ER status is negative. Note: in the unusual case where the ER status is not specified in the report but the 'erScoreType' variable is assigned 'QS', and a quick/Allred score (ranges from 0-8) is assigned in the report— attempt to infer the ER status on your own. Here, if the specified quick/Allred score is 0, 1, or 2, assign 'N'. Otherwise, assign 'P'",
+        "Assign 'NP': if the ER status test is explicitly specified as Not Performed in the report. Note: if the report mentions that the ER test is not applicable (N/A) to the patient, do not assign 'NP', instead assign null to this variable.",
+        "Assign null: if the ER status is not specified in the report or if the report mentions that the ER test is not applicable (N/A) to the patient."
+      ]
+    },
+    "prScoreType": {
+      "description": "If the pathology report specifies a immunohistochemistry test score for progesterone receptor (PR) status, determine the type of score that is being reported.",
+      "type": ["string", "null"],
+      "enum": ["QS", "IP", "MD", "I", "P", null],
+      "enumDescriptions": [
+        "Assign 'QS': if the report mentions that it is reporting an Allred score or a quick score (QS) for PR status. Its value ranges from 0-8. Note 1: if the score for PR status is reported as a fraction out of 8 without mentioning the score type (e.g. 7/8) assume that it is reporting an Allred score, and assign 'QS'. Note 2: if the score for PR status is reported as an integer, the integer is between 0 and 8, and the report does not specify any of the PR score types listed here, assume that it is reporting an Allred score and assign 'QS'. Note 3: if a quick/Allred score is being reported in conjunction with other component scores (i.e. percentage of positive cells and intensity of staining) choose the quick/Allred score, and therefore assign 'QS'.",
+        "Assign 'IP': if the report mentions that it is reporting a H-score or a combined score obtained by multiplying the intensity of staining and the percentage of positive cells for PR status. Its value ranges from 0-300. Note: if a H-score/combined score is being reported in conjunction with other component scores (i.e. percentage of positive cells and intensity of staining) choose the H-score/combined score, and therefore assign 'IP'.",
+        "Assign 'MD': if the report mentions that it is reporting the Mitch Dowsett score for PR status. Its value ranges from 0-18. Note: if a Mitch Dowsett score is being reported in conjunction with other component scores (i.e. percentage of positive cells and intensity of staining) choose the Mitch Dowsett score, and therefore assign 'MD'.",
+        "Assign 'I': if the report only mentions the intensity of staining for PR status and does not mention any derived scores (i.e. quick/Allred score, H-score/combined score, Mitch Dowsett score). This case is unusual. Its value ranges from 0-3. Note: if the intensity of staining is being reported for PR status in conjunction with a derived score (i.e. quick/Allred score, H-score/combined score, Mitch Dowsett score) choose the derived score, and do not assign 'I'.",
+        "Assign 'P': if the report only mentions the percentage of positive cells for PR status and does not mention any derived scores (i.e. quick/Allred score, H-score/combined score, Mitch Dowsett score). This case is unusual. Its value ranges from 0-100%. Note: if the percentage of positive cells is being reported for PR status in conjunction with a derived score (i.e. quick/Allred score, H-score/combined score, Mitch Dowsett score) choose the derived score, and do not assign 'P'.",
+        "Assign null: if the report does not mention any of the PR score types listed here or if none of the listed options are appropriate."
+      ]
+    },
+    "prStatus": {
+      "description": "If the pathology report specifies the progesterone receptor (PR) status, extract and assign the value to this variable.",
+      "type": ["string", "null"],
+      "enum": ["P", "N", "NP", null],
+      "enumDescriptions": [
+        "Assign 'P': if the report specifies that the PR status is positive. Note: in the unusual case where the PR status is not specified in the report but the 'prScoreType' variable is assigned 'QS', and a quick/Allred score (ranges from 0-8) is assigned in the report— attempt to infer the PR status on your own. Here, if the specified quick/Allred score is 3, 4, 5, 6, 7, or 8, assign 'P'. Otherwise, assign 'N'",
+        "Assign 'N': if the report specifies that the PR status is negative. Note: in the unusual case where the PR status is not specified in the report but the 'prScoreType' variable is assigned 'QS', and a quick/Allred score (ranges from 0-8) is assigned in the report— attempt to infer the PR status on your own. Here, if the specified quick/Allred score is 0, 1, or 2, assign 'N'. Otherwise, assign 'P'",
+        "Assign 'NP': if the PR status test is explicitly specified as Not Performed in the report. Note: if the report mentions that the PR test is not applicable (N/A) to the patient, do not assign 'NP', instead assign null to this variable.",
+        "Assign null: if the PR status is not specified in the report or if the report mentions that the PR test is not applicable (N/A) to the patient."
+      ]
+    },
+    "her2IhcScore": {
+      "description": "If the pathology report specifies a immunohistochemistry (IHC) score to determine the HER2 status, extract and assign the value to this variable. The IHC score is typically reported as 0, 1+, 2+, or 3+. The same scores may sometimes be represented as fractions, such as 0/3, 1/3, 2/3, and 3/3. In this case, map them to the corresponding values from the enum list i.e., 0, 1+, 2+, and 3+, respectively, before assigning it to this variable. The score may sometimes be represented using a shorthand notation, such as '+++' to indicate a score of 3+. Here again, map them to the corresponding value in the enum list. Assign null: if the HER2 IHC score is not specified in the report or if the report mentions that the HER2 IHC test is not applicable (N/A) to the patient. Note 1: expect typographical errors and sentence alignment errors typical in documents generated using optical character recognition. For example, a HER2 IHC score of 9 is unlikely and should be interpreted as the similar looking 0. Note 2: if multiple HER2 IHC scores are specified in the report, the score in the conclusion section should be preferred.",
+      "type": ["string", "null"],
+      "enum": ["0", "1+", "2+", "3+", null]
+    },
+    "her2Status": {
+      "description": "If the pathology report specifies the HER2 status, extract and assign the value to this variable. In the unusual event where a HER2 IHC score is specified in the report but the HER2 status is not specified, map the value of the HER2 IHC score to the corresponding HER2 status as follows: 0 -> 'N', 1+ -> 'N', 2+ -> 'B', 3+ -> 'P'. Note 1: expect typographical errors and sentence alignment errors typical in documents generated using optical character recognition. Note 2: if multiple HER2 statuses are specified in the report, the status specified in the conclusion section should be preferred.",
+      "type": ["string", "null"],
+      "enum": ["N", "B", "P", "NP", null],
+      "enumDescriptions": [
+        "Assign 'N': if the HER2 status is specified as Negative in the report.",
+        "Assign 'B': if the HER2 status is specified as Borderline in the report.",
+        "Assign 'P': if the HER2 status is specified as Positive in the report.",
+        "Assign 'NP': if the HER2 status test is explicitly specified as Not Performed in the report. Note: if the report mentions that the HER2 test is not applicable (N/A) to the patient, do not assign 'NP', instead assign null to this variable.",
+        "Assign null: if the HER2 status is not specified in the report or if the report mentions that the HER2 test is not applicable (N/A) to the patient."
+      ]
+    },
+    "her2FISH": {
+      "description": "If the pathology report specifies results from a fluorescence in situ hybridization (FISH) test or In situ hybridization (ISH) test to determine the HER2 status, extract the result and assign the value to this variable. Assign null: if the HER2 FISH test is not specified in the report. Note 1: if a FISH/ISH test is recommended for the future and no results from the FISH/ISH test was mentioned in the current report, ignore it and assign null to this variable. Note 2: expect typographical errors and sentence alignment errors typical in documents generated using optical character recognition. Note 2: if multiple HER2 FISH/ISH test results are specified in the report, the result in the conclusion section should be preferred.",
+      "type": ["string", "null"],
+      "enum": ["A", "N", "P", "NEG", "NP", null],
+      "enumDescriptions": [
+        "Assign 'A': if the HER2 FISH/ISH test result/significance is described as Amplified in the report.",
+        "Assign 'N': if the HER2 FISH/ISH test result/significance is described as Non-Amplified in the report.",
+        "Assign 'P': if the HER2 FISH/ISH test result/significance is described as Positive in the report.",
+        "Assign 'NEG': if the HER2 FISH/ISH test result/significance is described as Negative or Normal in the report.",
+        "Assign 'NP': if the HER2 FISH/ISH test is explicitly specified as Not Performed in the report. Note: if the report mentions that the FISH/ISH test is not applicable (N/A) to the patient, do not assign 'NP', instead assign null to this variable.",
+        "Assign null: if the HER2 FISH/ISH test result is not present in the report, if the FISH/ISH test is requested but no FISH/ISH test results are present in this report, and if the report mentions that the FISH/ISH test is not applicable (N/A) to the patient."
+      ]
+    },
+    "ki67": {
+      "description": "If the pathology report specifies a Ki67 score (percentage of positive nuclei), extract and assign the value to this variable. Assign null: if the Ki67 score is not specified in the report. Note 1: Since this value is an indicator of cell proliferation, it may be described along lines similar to— 'percent cells that are in cell cycle', 'percent cells proliferating', or 'proliferation index'. Note 2: If a range of values is specified (e.g. 20-30), assign the upper-bound value (e.g. 30).",
+      "type": ["number", "null"]
+    },
+    "invasiveCarcinomaType": {
+      "description": "If the report mentions the presence of invasive carcinoma, determine if the report also specifies the type of invasive carcinoma. If the type is specified, select and assign the most representative option from the enum list for this variable.",
+      "type": ["string", "null"],
+      "enum": ["NST", "PST", "MTT", "MIX", "OTH", null],
+      "enumDescriptions": [
+        "Assign 'NST': if the invasive carcinoma type is specified as of 'No Special Type' (NST). When there is no mixed tumour component, invasive/infiltrating ductal carcinoma (IDC) implies No Special Type.",
+        "Assign 'PST': if the invasive carcinoma type is specified as of 'Pure Special Type'. When there is no mixed tumour component and the tumour type is not described as type other, a single invasive component such as— only invasive lobular carcinoma (ILC), only invasive tubular carcinoma, only invasive cribriform carcinoma, only invasive mucinous carcinoma, only papillary carcinoma, only medullary breast cancer, etc.— each imply that the invasive carcinoma is of Pure Special Type.",
+        "Assign 'MTT': if the invasive carcinoma type is specified as of 'Mixed' type, and the mixed components were specifically ductal (NST) and lobular.",
+        "Assign 'MIX': if the invasive carcinoma type is specified as of 'Mixed' type, and the mixed components were anything other than the pair— ductal (NST) and lobular. For example, mixed ductal and mucinous, mixed ductal and tubular, mixed lobular and cribriform, etc.",
+        "Assign 'OTH': if the invasive carcinoma type is specified as of 'Other' type.",
+        "Assign null: if the invasive carcinoma type is not specified in the report."
+      ]
+    },
+    "invasiveCarcinomaPSTSubtype": {
+      "description": "If the report specifies the invasive carcinoma type as Pure Special Type (PST), determine if the report also specifies the type of the component of the Pure Special Type. If the component type is specified, select and assign the most representative option from the enum list for this variable.",
+      "type": ["string", "null"],
+      "enum": ["Lob","Pap", "Tub", "Crb", "Muc", "Med", null],
+      "enumDescriptions": [
+        "Assign 'Lob': if the invasive carcinoma type is specified as 'Pure Special Type' and the component type is specified as 'Lobular'.",
+        "Assign 'Pap': if the invasive carcinoma type is specified as 'Pure Special Type' and the component type is specified as 'Papillary'.",
+        "Assign 'Tub': if the invasive carcinoma type is specified as 'Pure Special Type' and the component type is specified as 'Tubular'.",
+        "Assign 'Crb': if the invasive carcinoma type is specified as 'Pure Special Type' and the component type is specified as 'Cribriform'.",
+        "Assign 'Muc': if the invasive carcinoma type is specified as 'Pure Special Type' and the component type is specified as 'Mucinous'.",
+        "Assign 'Med': if the invasive carcinoma type is specified as 'Pure Special Type' and the component type is specified as 'Medullary'.",
+        "Assign null: if the invasive carcinoma type is not specified as of 'Pure Special Type' in the report (and so variable 'invasiveCarcinomaType' is not 'PST') or the component type is not specified in the report."
+      ]
+    },
+    "tumourExtent": {
+      "description": "Determine if the report specifies the tumour extent. Note: if the pathologist does not explicitly describe the tumour as one of the enum options, do not try to infer it on your own.",
+      "type": ["string", "null"],
+      "enum": ["LOC", "MIF", "UNI", null],
+      "enumDescriptions": [
+        "Assign 'LOC': if the tumour extent is explicitly described as 'Localised' in the report.",
+        "Assign 'MIF': if the tumour extent is explicitly described as 'Multifocal' (or Multiple foci, Multi invasive foci, etc.) in the report.",
+        "Assign 'UNI': if the tumour extent is explicitly described as 'Unifocal' in the report. Note: if the report only mentions that the tumour is not multifocal, do not assume that it is unifocal unless explicitly stated as unifocal. Presence of a single tumour also does not imply that the tumour is unifocal unless explicitly stated as unifocal.",
+        "Assign null: if the tumour extent is not explicitly specified in the report."
+      ]
+    },
+    "axillaryProcedure": {
+      "description": "Identify the surgical procedure performed to either remove or sample the axillary lymph nodes, as mentioned in the report. Assign null: if not applicable or if no information on axillary procedure is present in the report.",
+      "type": ["array", "null"],
+      "items": {
+        "type": "string",
+        "enum": ["ANC", "ANS", "NLN", "OSNA", "SNB"],
+        "enumDescriptions": [
+          "Assign 'ANC': if Axillary Node Clearance was done.",
+          "Assign 'ANS': if Axillary Node Sample was collected.",
+          "Assign 'NLN': if the report explicitly mentions that no Lymph node procedure was done. Note: if no information is available in the report regarding axillary procedures, assign null to the variable.",
+          "Assign 'OSNA': if One-Step Nucleic Acid Amplification (OSNA) assessment was performed.",
+          "Assign 'SNB': if Sentinel Node Biopsy."
+        ]
+      }
+    },
+    "vascularInvasion": {
+      "description": "Determine if the pathologist has reported the status of lymphatic or vascular invasion.",
+      "type": ["string", "null"],
+      "enum": ["Pres", "Poss", "NS", null],
+      "enumDescriptions": [
+        "Assign 'Pres': if the pathologist has reported that lymphatic or vascular invasion is present.",
+        "Assign 'Poss': if the pathologist has reported that lymphatic or vascular invasion is possible or probable.",
+        "Assign 'NS': if the pathologist has reported that lymphatic or vascular invasion is not seen.",
+        "Assign null: if the pathologist has not reported on the status of lymphatic or vascular invasion."
+      ]
+    },
+    "axillaryNodesPresent": {
+      "description": "Determine if the report mentions that axillary lymph nodes were present/sampled. Look for sections in the report that summarizes the findings from analyzing the nodes (total nodes, total positives). If such a summary is provided, only use the information in this section and ignore the information elsewhere. Sometimes this information is explicitly stated e.g. 'Lymph nodes sampled: Yes'. Sometimes this information is only implied through an analysis summary using fractions e.g., '0/3' implies that 0 out of 3 lymph nodes are positive for cancer. Sometimes this information is only implied through an analysis summary using free-text e.g. 'Total nodes: 3'. All of these imply that lymph nodes were present/sampled. Note: If the nodes are not explicitly described as of type 'other', always assume that the nodes are of axillary type.",
+      "type": ["string", "null"],
+      "enum": ["Y", "N", null],
+      "enumDescriptions": [
+        "Assign 'Y': if the report clearly indicates that axillary lymph nodes are present/sampled for analysis.",
+        "Assign 'N': if the report explicitly specifies that axillary lymph nodes are not present/sampled for analysis. Note 1: If the total number of axillary nodes is specified as 0, assign 'N'. Note 2: If only nodes of type 'other' are mentioned in the report, assign 'N'.",
+        "Assign null: if the report does not contain this information."
+      ]
+    },
+    "axillaryNodesTotal": {
+      "description": "If the report summarizes the number of axillary lymph nodes analyzed and the number of nodes that were found to be positive for cancer, determine the total number of axillary lymph nodes that were analyzed in the report. Look for sections in the report that summarizes the findings from analyzing the nodes (total nodes, total positives). If such a summary is provided, only use the information in this section and ignore the information elsewhere. Sometimes this information is summarized using fractions e.g., '0/3' implies that 0 out of 3 lymph nodes are positive for cancer. Sometimes this information is summarized using free-text e.g. 'Total nodes: 3'. In both these examples, you would assign the value 3 to this variable. Assign null: if the report does not contain this information. Note 1: If the nodes are not explicitly described as of type 'other', always assume that the nodes are of axillary type. Note 2: Often, the total number of lymph nodes is tallied in the report but sometimes you may have to sum the total axillary nodes up yourself. Use your judgement here. Note 3: If 'axillaryNodesPresent' is assigned 'N' or null, assign null to 'axillaryNodesTotal'. This variable takes a non-null value only if 'axillaryNodesPresent' is assigned 'Y'.",
+      "type": ["integer", "null"]
+    },
+    "axillaryNodesPositive": {
+      "description": "If the report summarizes the number of axillary lymph nodes analyzed and the number of nodes that were found to be positive for cancer, determine the number of axillary lymph nodes that were found to be positive for cancer. Look for sections in the report that summarizes the findings from analyzing the nodes (total nodes, total positives). If such a summary is provided, only use the information in this section and ignore the information elsewhere.Sometimes this information is summarized using fractions e.g., '0/3' implies that 0 out of 3 lymph nodes are positive for cancer. Sometimes this information is summarized using free-text e.g. 'Number positive: 0' or 'all nodes were negative for tumour'. In all these examples, you would assign the value 0 to this variable. Assign null: if the report does not contain this information. Note 1: If the nodes are not explicitly described as of type 'other', always assume that the nodes are of axillary type. Note 2: Often, the number of positive lymph nodes is tallied in the report but sometimes you may have to sum the positive axillary nodes up yourself. Use your judgement here. Note 3: If 'axillaryNodesPresent' is assigned 'N' or null, assign null to 'axillaryNodesPositive'.",
+      "type": ["integer", "null"]
+    },
+    "otherNodesPresent": {
+      "description": "Determine if the report mentions that lymph nodes of 'other' (not axillary) type were present/sampled. Look for sections in the report that summarizes the findings from analyzing the nodes (total nodes, total positives). If such a summary is provided, only use the information in this section and ignore the information elsewhere. Note 1: Only assume that the lymph nodes are of 'other' type if it is explicitly stated by the pathologist e.g. 'Other nodes present    Yes' or 'Other Yes'. Sometimes, in the report summary, the pathologist may explicitly group axillary and non-axillary nodes separately, here too you can assume that the non-axillary nodes are of 'other' type. Otherwise, assume that they are axillary nodes. Note 2: sentinel nodes are not necessarily 'other' nodes unless explicitly stated by the pathologist.",
+      "type": ["string", "null"],
+      "enum": ["Y", "N", null],
+      "enumDescriptions": [
+        "Assign 'Y': if the report clearly indicates that lymph nodes of type 'other' are present/sampled.",
+        "Assign 'N': if the report clearly specifies that lymph nodes of type 'other' are not present/sampled. Note: If the total number of 'other' nodes is specified as 0, assign 'N'.",
+        "Assign null: if the report does not contain information on nodes of 'other' type. Note: If only axillary nodes are mentioned in the report and the report contains no mention of nodes of 'other' type, assign null."
+      ]
+    },
+    "otherNodesTotal": {
+      "description": "If the report summarizes the number of lymph nodes of 'other' type analyzed and the number of other nodes that were found to be positive for cancer, determine the total number of lymph nodes of 'other' type that were analyzed in the report. Look for sections in the report that summarizes the findings from analyzing the nodes (total nodes, total positives). If such a summary is provided, only use the information in this section and ignore the information elsewhere. Sometimes this information is summarized using fractions e.g., '0/3' under other nodes implies that 0 out of 3 other lymph nodes are positive for cancer. Sometimes this information is summarized using free-text e.g. 'Total nodes: 3' under other nodes. In both these examples, you would assign the value 3 to this variable. Assign null: if the report does not contain this information. Note: If 'otherNodesPresent' is assigned 'N' or null, assign null to 'otherNodesTotal'. This variable takes a non-null value only if 'otherNodesPresent' is assigned 'Y'.",
+      "type": ["integer", "null"]
+    },
+    "otherNodesPositive": {
+      "description": "If the report summarizes the number of lymph nodes of 'other' type analyzed and the number of other nodes that were found to be positive for cancer, determine the number of lymph nodes of 'other' type that were found to be positive for cancer. Look for sections in the report that summarizes the findings from analyzing the nodes (total nodes, total positives). If such a summary is provided, only use the information in this section and ignore the information elsewhere. Sometimes this information is summarized using fractions e.g., '0/3' under other nodes implies that 0 out of 3 other lymph nodes are positive for cancer. Sometimes this information is summarized using free-text e.g. 'Number positive: 0' or 'all nodes were negative for tumour' under other nodes. In all these examples, you would assign the value 0 to this variable. Assign null: if the report does not contain this information. Note: If 'otherNodesPresent' is assigned 'N' or null, assign null to 'otherNodesPositive'. This variable takes a non-null value only if 'otherNodesPresent' is assigned 'Y'.",
+      "type": ["integer", "null"]
+    },
+    "side": {
+      "description": "The laterality of the breast from which the main tissue specimen was collected. The information in the pathology report is in reference to this specimen.",
+      "type": ["string", "null"],
+      "enum": ["L", "R", null],
+      "enumDescriptions": [
+        "Assign 'L': if the specimen was collected from the left breast.",
+        "Assign 'R': if the specimen was collected from the right breast.",
+        "Assign null: if the laterality of the specimen is not known or if the information is missing in the report."
+      ]
+    },
+    "screenDetected": {
+      "description": "Determine if the pathology report mentions if the tumour/abnormality was detected through cancer screening.",
+      "type": ["string", "null"],
+      "enum": ["Y", "N", null],
+      "enumDescriptions": [
+        "Assign 'Y': if the report mentions that the tumour/abnormality was detected through cancer screening.",
+        "Assign 'N': if the report explicitly mentions that the tumour/abnormality was not detected through cancer screening.",
+        "Assign null: if the method of detection is not known or there is no information in the report regarding the tumour/abnormality detection method."
+      ]
+    },
+    "specimenType": {
+      "description": "Determine the surgical procedure used to obtain the main tissue specimen described in the pathology report. Assign the most appropriate code based on the information provided in the report.",
+      "type": ["string", "null"],
+      "enum": ["WBB", "WLE", "M", "NBO", "OB", "Re-ex", "SE", "TMP", "FNA", "LB", null],
+      "enumDescriptions": [
+        "Assign 'WBB': if Wide Bore Needle Biopsy (also called Core Biopsy or Mammotome Biopsy) was performed.",
+        "Assign 'WLE': if Wide Local Excision was performed.",
+        "Assign 'M': if Mastectomy was performed.",
+        "Assign 'NBO': if only Node Biopsy was performed.",
+        "Assign 'OB': if Open Biopsy was performed.",
+        "Assign 'Re-ex': if a re-excision (wide excision) was performed.",
+        "Assign 'SE': if Segmental Excision was performed.",
+        "Assign 'TMP': if Therapeutic Mammoplasty was performed.",
+        "Assign 'FNA': if Fine Needle Aspiration was performed.",
+        "Assign 'LB': if Local Biopsy was performed.",
+        "Assign null: if this information is missing in the report or it cannot be determined from the information in the report."
+      ]
+    },
+    "specimenWeight": {
+      "description": "The weight in grams (g) of the primary biopsied/excised/resected tissue specimen described and analyzed in the report. If multiple specimens are mentioned, only report the weight of the primary specimen, while ignoring the weights of node biopsies or specimen derived from the primary tissue specimen. Assign null: if the information regarding the primary specimen weight is missing in the report.",
+      "type": ["number", "null"]
+    },
+    "postNeoadjuvantChemo": {
+      "description": "If the report mentions that the patient received a type of neoadjuvant treatment prior to the specimen being taken, extract the information on the type of treatment the patient received.",
+      "type": ["string", "null"],
+      "enum": ["C", "E", null],
+      "enumDescriptions": [
+        "Assign 'C': if the report explicitly mentions that the patient received chemotherapy.",
+        "Assign 'E': if the report explicitly mentions that the patient received endocrine therapy.",
+        "Assign null: if the report does not contain any information on neoadjuvant therapy status."
+      ]
+    },
+    "tStage": {
+      "description": "Determine if the report explicitly assigns a tumour stage (T stage) from the AJCC TNM staging system. The T stage can be any of the following: 'TX', 'T0', 'Tis', 'T1', 'T1mi', 'T1a', 'T1b', 'T1c', 'T2', 'T3', 'T4', 'T4a', 'T4b', 'T4c', 'T4d'. It may optionally be prefixed by 'c' to indicate clinical staging (e.g., 'cT1', 'cT1b', 'cT3', etc.) or 'p' to indicate pathological staging (e.g., 'pTis', 'pT1c', 'pT2', etc.). It may also optionally be prefixed by 'y' to indicate post-therapy staging (e.g., 'ypT1a', 'ypT4', etc.). It may optionally be suffixed by '(m)' to indicate multiple primary tumours (e.g., 'pT1(m)', 'ypT3(m)', etc.) or '(mic)' for microinvasion (e.g., 'pT1c(mic)', 'ypT1(mic)', etc.). Extract the T stage specified in the report, and assign to this variable the most appropriate T stage that is consistent with the described pattern. Format the extracted string, if necessary. Assign null: if no T stage is explicitly assigned by the pathologist in the report. Note 1: If the pathologist does not assign a T stage, do not infer it on your own; simply assign null instead. Note 2: Expect the report to contain typographical errors from OCR and always conform to the list of possible T stages given here. Note 3: Sometimes tubule formation scores (for grading) may seem similar to some of the T stages (T1, T2, T3), in which case ignore them because grades are not the same as stages. Grading is often written in TPM triplets e.g. (T3, P2, M1). Ignore grades.",
+      "type": ["string", "null"],
+      "pattern": "^(y)?(c|p)?(TX|T0|Tis|T1|T1mi|T1a|T1b|T1c|T2|T3|T4|T4a|T4b|T4c|T4d)(\\(m\\)|\\(mic\\))?$"
+    },
+    "nStage": {
+      "description": "Determine if the report explicitly assigns a regional lymph node stage (N stage) from the AJCC TNM staging system. The N stage can be any of the following: 'NX', 'N0', 'N1', 'N1mi', 'N1a', 'N1b', 'N1c', 'N2', 'N2a', 'N2b', 'N3', 'N3a', 'N3b', 'N3c'. It may optionally be prefixed by 'c' to indicate clinical staging (e.g., 'cN1', 'cN2b', 'cNX', etc.) or 'p' to indicate pathological staging (e.g., 'pN0', 'pN1a', 'pN3', etc.). It may also optionally be prefixed by 'y' to indicate post-therapy staging (e.g., 'ypN0', 'ypN1', etc.). It may also optionally be suffixed by '(sn)' to indicate sentinel node biopsy (e.g., 'pN0(sn)', 'pN1(sn)', etc.) or '(OSNA)' for one-step nucleic acid amplification (e.g., 'pN0(OSNA)', 'pN2a(OSNA)', etc.). Extract the N stage specified in the report, and assign to this variable the most appropriate N stage that is consistent with the described pattern. Format the extracted string, if necessary. Assign null: if no N stage is explicitly assigned by the pathologist in the report. Note 1: If the pathologist does not assign an N stage, do not infer it on your own; simply assign null instead. Note 2: Expect the report to contain typographical errors from OCR and always conform to the list of possible N stages given here. Note 3: Sometimes nuclear pleomorphism scores (for grading) may seem similar to some of the N stages (N1, N2, N3), in which case ignore them because grades are not the same as stages. Grading is often written in ANM triplets e.g. '(A3, N2, M1)'. Ignore grades.",
+      "type": ["string", "null"],
+      "pattern": "^(y)?(c|p)?(NX|N0|N1|N1mi|N1a|N1b|N1c|N2|N2a|N2b|N3|N3a|N3b|N3c)(\\(sn\\)|\\(OSNA\\))?$"
+    },
+    "mStage": {
+      "description": "Determine if the report explicitly assigns a distant metastasis stage (M stage) from the AJCC TNM staging system. The M stage can be any of the following: 'MX', 'M0', 'M0(i+)', 'M1'. It may optionally be prefixed by 'c' to indicate clinical staging (e.g., 'cMX', 'cM0', 'cM1', etc.) or 'p' to indicate pathological staging (e.g., 'pMX', 'pM0', 'pM1', etc.). Extract the M stage specified in the report, and assign to this variable the most appropriate M stage that is consistent with the described pattern. Format the extracted string, if necessary. if no M stage is explicitly assigned by the pathologist in the report. Note 1: If the pathologist does not assign an M stage, do not infer it on your own; simply assign null instead. Note 2: Expect the report to contain typographical errors from OCR and always conform to the list of possible M stages given here. Note 3: Sometimes mitotic count scores (for grading) may seem similar to an M stage (M1), in which case ignore them because grades are not the same as stages. Grading is often written in ANM or TPM triplets e.g. '(A3, N2, M1)' or '(T3, P2, M1)'. Ignore grades.",
+      "type": ["string", "null"],
+      "pattern": "^(c|p)?(MX|M0|M0\\(i\\+\\)|M1)$"
+    },
+    "sizeWholeTumour": {
+      "description": "If the size (in mm) of the whole tumour is specified in the report, assign the value to this variable. Otherwise, assign null. Note: ignore sizes of individual foci; only report the size of the whole tumour, if reported. Otherwise, assign null.",
+      "type": ["number", "null"]
+    },
+    "sizeDcisOnly": {
+      "description": "If the size (in mm) of the ductal carcinoma in situ (DCIS) component of the tumour is specified in the report, assign the value to this variable. Otherwise, assign null.",
+      "type": ["number", "null"]
+    },
+    "sizeInvasiveTumour": {
+      "description": "If the size (in mm) of the invasive tumour component of the tumour is specified in the report, assign the value to this variable. Otherwise, assign null.",
+      "type": ["number", "null"]
+    }
+  },
+  "required": ["cis", "dcis", "lcis", "pleomorphicLCIS", "pagetsDisease", "microinvasion", "invasiveCarcinoma", "solidDCISGP", "cribriformDCISGP", "micropapillaryDCISGP", "papillaryDCISGP", "apocrineDCISGP", "flatDCISGP", "comedoDCISGP", "clingingDCISGP", "comedonecrosisExtent", "closestRelevantMargin", "excisionMargin", "invasiveGrade", "tubulesScore", "nuclearPleomorphismScore", "mitoticActivityScore", "dcisGrade", "erScoreType", "erStatus", "prScoreType", "prStatus", "her2IhcScore", "her2Status", "her2FISH", "ki67", "invasiveCarcinomaType", "invasiveCarcinomaPSTSubtype", "tumourExtent", "axillaryProcedure", "vascularInvasion", "axillaryNodesPresent", "axillaryNodesTotal", "axillaryNodesPositive", "otherNodesPresent", "otherNodesTotal", "otherNodesPositive", "side", "screenDetected", "specimenType", "specimenWeight", "postNeoadjuvantChemo", "tStage", "nStage", "mStage", "sizeWholeTumour", "sizeDcisOnly", "sizeInvasiveTumour"]
+}
